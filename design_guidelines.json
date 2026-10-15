@@ -1,0 +1,171 @@
+{
+  "app_name": "ZERO TRACE",
+  "personality": "7 Dark-First Utility DARK",
+  "personality_one_liner": "A high-stakes tactical command center merging sports-management density with cyber-investigation tension.",
+  "color": {
+    "surface": "#0E0E12",
+    "onSurface": "#E5E7EB",
+    "surfaceSecondary": "#1A1C23",
+    "onSurfaceSecondary": "#D1D5DB",
+    "surfaceTertiary": "#252832",
+    "onSurfaceTertiary": "#9CA3AF",
+    "surfaceInverse": "#F3F4F6",
+    "onSurfaceInverse": "#000000",
+    "brand": "#F59E0B",
+    "brandPrimary": "#F59E0B",
+    "onBrandPrimary": "#000000",
+    "brandSecondary": "#D97706",
+    "onBrandSecondary": "#000000",
+    "brandTertiary": "#451A03",
+    "onBrandTertiary": "#FDE68A",
+    "success": "#10B981",
+    "onSuccess": "#000000",
+    "warning": "#F59E0B",
+    "onWarning": "#000000",
+    "error": "#EF4444",
+    "onError": "#FFFFFF",
+    "info": "#6B7280",
+    "onInfo": "#FFFFFF",
+    "border": "#252832",
+    "borderStrong": "#374151",
+    "divider": "#1F222A",
+    "muted": "#6B7280",
+    "onBrand": "#000000"
+  },
+  "typography": {
+    "displayFontFamily": "Rajdhani",
+    "textFontFamily": "IBM Plex Sans",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Handle spacing correctly dont have extra spaces where its not required, handle padding and margin corectly and subtle for buttons and components",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 4,
+    "md": 8,
+    "lg": 12,
+    "pill": 999
+  },
+  "shadow_tier": "0",
+  "navigation": "bottom_tabs",
+  "icon_set": "Phosphor",
+  "glassmorphism": {
+    "enabled": "false",
+    "do's": [
+      "Use only if absolutely necessary for overlay menus, but prefer solid surfaceSecondary with border for command-center feel"
+    ],
+    "dont's": [
+      "Do not use blur for cards or lists; clarity and data density are paramount in Dark-First Utility"
+    ]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-glass-effect",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Intro",
+      "purpose": "Role selection (THE HACKER / THE HUNTER) to set the narrative context.",
+      "states": {
+        "loading": "Terminal cursor blinking.",
+        "empty": "N/A",
+        "error": "Access Denied overlay."
+      },
+      "layout": "Full-screen cinematic split or two massive cards. Use the satellite view image as background with a heavy gradient-to-dark scrim. Typography should be oversized, high-contrast, utilizing the display font to create an immediate hacker/investigation mood."
+    },
+    {
+      "name": "Dashboard",
+      "purpose": "Primary command center showing player stats, AP, and current targets.",
+      "states": {
+        "loading": "Skeleton of tactical cards.",
+        "empty": "No active targets. Display placeholder outline.",
+        "error": "Connection lost to syndicate."
+      },
+      "layout": "Modular widget-based architecture. Top row: Player stats (Money, Stress, Skill, Heat, Reputation) in dense, pixel-perfect metric cards. Middle section: Turn-based timeline (Day/AP). Bottom section: List of 3 fictional targets in a table-like format with visual severity indicators. Use tabular numerals for stats."
+    },
+    {
+      "name": "Operation",
+      "purpose": "Abstract 5-phase tactical execution (Recon to Escape) with decision cards.",
+      "states": {
+        "loading": "Connecting to proxy...",
+        "empty": "No operation selected.",
+        "error": "Operation aborted."
+      },
+      "layout": "Hierarchical tactical view. Top: 5-Phase progress bar (Recon -> Access -> Persistence -> Extraction -> Escape) acting as the main anchor. Center: Current phase details (Time, Costs, Risks) in monospace-like structured blocks. Bottom: Horizontal scroll or grid of Decision Cards (cautious, fast, etc.). Use helper labels and avoid generic descriptions."
+    },
+    {
+      "name": "Banking",
+      "purpose": "High-end fintech interface managing legal vs illegal funds, fixed costs, and data assets.",
+      "states": {
+        "loading": "Syncing blockchain/bank records...",
+        "empty": "No transaction history.",
+        "error": "Bank server unreachable."
+      },
+      "layout": "Mobile-first single-column fintech approach. Generous horizontal padding. Top: Large tabular balance with 'available' vs 'marked'. Middle: Action chips for 'Jobs' and 'Data Ownership' (Sell/Publish/Delete). Bottom: Transaction history with animated row insertions. Use ghost borders/background shifts instead of heavy lines. DO NOT rely only on color for income/expense; use +/-, alignment, and icons."
+    },
+    {
+      "name": "NewsFeed",
+      "purpose": "Chronological stream of world events and consequences of player actions.",
+      "states": {
+        "loading": "Decrypting intercepts...",
+        "empty": "No intercepts recorded.",
+        "error": "Feed offline."
+      },
+      "layout": "Timeline layout with vertical connector line. Each news item is a card. Distinguish between global news and direct consequences using visual tags (brandTertiary for player-related, surfaceTertiary for world)."
+    }
+  ],
+  "images": {
+    "hero_intro_bg": {
+      "url": "https://images.unsplash.com/photo-1544259342-306eccfec481?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxzYXRlbGxpdGUlMjB2aWV3JTIwZGFyayUyMGNpdHl8ZW58MHx8fHwxNzkxODUwNzUyfDA&ixlib=rb-4.1.0&q=85",
+      "dark": "https://images.unsplash.com/photo-1544259342-306eccfec481?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxzYXRlbGxpdGUlMjB2aWV3JTIwZGFyayUyMGNpdHl8ZW58MHx8fHwxNzkxODUwNzUyfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Satellite view of dark city at night"
+    },
+    "hero_banking_bg": {
+      "url": "https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBnZW9tZXRyaWN8ZW58MHx8fHwxNzkxODUwNzUyfDA&ixlib=rb-4.1.0&q=85",
+      "dark": "https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBnZW9tZXRyaWN8ZW58MHx8fHwxNzkxODUwNzUyfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract dark geometric architecture"
+    },
+    "empty_state_tactical": {
+      "url": "https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBnZW9tZXRyaWN8ZW58MHx8fHwxNzkxODUwNzUyfDA&ixlib=rb-4.1.0&q=85",
+      "dark": "https://images.unsplash.com/photo-1526289034009-0240ddb68ce3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBnZW9tZXRyaWN8ZW58MHx8fHwxNzkxODUwNzUyfDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract dark geometric architecture"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow 'Dark-First Utility DARK' layout principles: command-center aesthetic, modular widgets, and pixel-based density.",
+    "Do NOT use pure black (#000000) for backgrounds to prevent eye strain; stick to the provided #0E0E12 base.",
+    "Banking Screen MUST use semantic formatting for numbers (tabular numerals) and not rely exclusively on green/red colors for positive/negative balances. Use +/- signs and icons for accessibility.",
+    "All interactive decision cards in the Operation screen must feel tactical. Use sharp edges (radius 'sm' or 'md') and subtle border changes for focus states.",
+    "Ensure 'reduced motion' requirement from the brief is respected. Animations (like new transactions) should be subtle opacities/slides, not exaggerated bounces.",
+    "Use a vertical gradient-to-dark scrim underneath all text placed on background images (Intro, Banking top header if using image).",
+    "Never use Indigo, Violet, or Blue. Adhere strictly to the Amber/Obsidian palette."
+  ],
+  "haptics": {
+    "button_press": "impactLight",
+    "tab_change": "selection",
+    "decision_card_select": "impactMedium",
+    "transaction_arrived": "notificationSuccess",
+    "operation_aborted": "notificationError"
+  }
+}
